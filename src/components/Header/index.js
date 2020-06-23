@@ -8,7 +8,7 @@ import logo from '~/assets/logo-purple.svg';
 import { Container, Content, Profile } from './styles';
 
 export default function Header() {
-  const profile = useSelector(state => state.user.profile);
+  const profile = useSelector((state) => state.user.profile);
 
   return (
     <Container>
@@ -31,7 +31,7 @@ export default function Header() {
                 (profile.avatar && profile.avatar.url) ||
                 'https://api.adorable.io/avatars/50/abott@adorable.png'
               }
-              alt="Diego Fernandes"
+              alt={profile.name}
             />
           </Profile>
         </aside>
